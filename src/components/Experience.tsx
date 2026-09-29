@@ -2,6 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { COLORS } from '../constants/colors';
 import Reveal from './Reveal';
 
+type Job = {
+  role: string;
+  company: string;
+  dates: string;
+  points: string[];
+};
+
 const experience = [
   {
     role: "ICT Intern",
@@ -28,7 +35,7 @@ const experience = [
 ];
 
 // Wraps each timeline entry so it can detect when it scrolls into view
-const TimelineItem = ({ job, index }) => {
+const TimelineItem = ({ job, index }: { job: Job; index: number }) => {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 

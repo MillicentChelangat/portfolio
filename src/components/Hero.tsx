@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight, Shield, Award, Clock } from 'lucide-react';
 import { COLORS } from '../constants/colors';
 import Reveal from './Reveal';
 
